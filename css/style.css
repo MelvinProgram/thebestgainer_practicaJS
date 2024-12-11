@@ -1,0 +1,1158 @@
+
+/* ======================== Inicializamos los estilos de la página ======================== */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ============================ Estilos HTML ============================== */
+/* html{
+    width: 100%;
+    height: 100%;
+} */
+
+/* -------------------------------- Body -------------------------------- */
+/* -------------------------------- Body -------------------------------- */
+/* -------------------------------- Body -------------------------------- */
+body{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+/* -------------------------------- Header -------------------------------- */
+/* -------------------------------- Header -------------------------------- */
+/* -------------------------------- Header -------------------------------- */
+.cabecera{
+    width: 100%;
+    height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.img-cabecera{
+    width: 100%;
+    height: 50vh;
+    aspect-ratio: 26/9;
+    position: absolute;
+    top: auto;
+    z-index: -1;
+    object-fit: cover;
+    opacity: calc(50%);
+    /* filter: blur(2px); */
+    
+}
+
+.cabecera h1{
+    width: 100%;
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 10px;
+
+    color: #ffffff;
+    text-shadow: 8px 0px 0px  #000000;
+    
+    font-size: 100px;
+    padding: 1% 0;
+
+    background-color: #003399c3;
+    box-shadow: 5px 0px 30px #000000;
+    margin-top: 13dvh;
+
+    opacity: 0;
+    transform: translatey(-50px);
+    transition: all 1s ease;
+    font-style: italic;
+}
+
+.txt-cabecera{
+    width: 40%;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    color: #e8b442;
+    text-shadow: 2px 1px 0px  #003399;
+    padding: 1% 0;
+    border-radius: 20px;
+    margin-top: 1dvh;
+    opacity: 0;
+    transform: translatey(0px);
+    transition: all 1s ease-in-out;
+    font-style: italic;
+}
+
+.txt-cabecera.muestra{
+    opacity: 1;
+    transform: translatey(10px);
+    transition: all 0;
+}
+
+
+h1.visible{
+    opacity: 1;
+    transform: translatey(0px);
+}
+
+/* Efecto de la galería */
+#h1-galeria{
+    opacity: 0;
+    transform: translatex(-50px);
+    transition: all 1s ease;
+}
+
+#h1-galeria.visible{
+    opacity: 1;
+    transform: translatex(0px);
+}
+
+/* Efecto de Presupuesto */
+#h1-presupuesto{
+    opacity: 0;
+    transform: translatey(50px);
+    transition: all 1s ease;
+}
+
+#h1-presupuesto.visible{
+    opacity: 1;
+    transform: translatey(0px);
+}
+
+/* Efecto de contacto */
+#h1-contacto{
+    opacity: 0;
+    transform: translatex(50px);
+    transition: all 1s ease;
+}
+
+#h1-contacto.visible{
+    opacity: 1;
+    transform: translatey(0px);
+}
+
+/* -------------------------- Barra de navegación -------------------------- */
+/* -------------------------- Barra de navegación -------------------------- */
+/* -------------------------- Barra de navegación -------------------------- */
+
+.barNav{
+    width: 100%;
+    height: 100%;
+    background-color: #003399;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+/* ========================= Titulo de la barra =========================*/
+/* ========================= Titulo de la barra =========================*/
+/* ========================= Titulo de la barra =========================*/
+
+.h3-barra{
+    width: 80%;
+    padding: 0.3% 0%;
+    margin-left: 1%;
+    text-align:left;
+    align-self: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: 5px;
+    text-shadow: 3px 0px 0px  #000000;
+    opacity: 0;
+    transition: all 1s;
+    color: #fff;
+}
+
+/* Estilos para el logo de la barra */
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 5%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    filter: drop-shadow(2px 0 1px #000000);
+
+}
+
+.titulo-img{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* Desplazamientos */
+.transform-right{transform: translatex(-20%); transition: all 0.8s;} /*Desplazamiento a la derecha*/
+.transform-left{transform: translatex(20%);} /*Desplazamiento a la izquierda*/
+.transform-up{transform: translatey(20%);} /*Desplazamiento para arriba*/
+.transform-down{transform: translatey(-20%);} /*Desplazamiento para abajo*/
+
+/*Muestra el estado normal del titulo h3*/
+.muestra{
+    opacity: 1;
+    transform: none;
+    transition: all 1s ease;
+} 
+
+/* -------Lista desordenada------- */
+/* -------Lista desordenada------- */
+/* -------Lista desordenada------- */
+
+.barNav>ul{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    /* border: 1px solid red; */
+}
+
+/* -------Elementos de la lista <ul> <li>...</li> </ul>------- */
+.barNav>ul>li{
+    width: 20%;
+    height: 50px;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* -------Enlaces <a>...</a>------- */
+a.enlaces-barra{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    color: #f9f9f9;
+    font-size: 20px;
+    padding: 2% 0;
+    
+}
+
+a.enlaces-barra:hover{
+    
+    background-color: #fdfdfd;
+    /* background-color: rgba(54, 88, 224, 0.993); */
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    color: #003399;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in;
+}
+
+/* -------Boton activo cuando esta en la página------- */
+#activo{
+    padding: 2% 0;
+    background-color: rgb(255, 255, 255);
+    color: #003399;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
+
+
+
+/* ------------------------- Main(Contenido principal) ------------------------- */
+/* ------------------------- Main(Contenido principal) ------------------------- */
+/* ------------------------- Main(Contenido principal) ------------------------- */
+.cajaMain{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    align-items: start;
+    margin: 1% 0 2% 4%;
+    /* background-color: aqua; */
+}
+
+/* -------Section------- */
+.seccion1{
+    width: 80%;
+    margin: 2% 0;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    /* border: 1px solid brown;
+    background-color: rgba(75, 185, 184, 0.656); */
+    overflow:hidden;
+}
+
+
+.seccion1 h2{
+    width: 100%;
+    /* background-color: #8ec0f3; */
+    padding: 1% 5%;
+    margin: 1% 5%;
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #003399;
+    text-shadow: 1px 0px 2px  #000000e5;
+    font-weight: 100;
+    font-style:italic;
+}
+
+section p{
+    width: 80%;
+    font-size: 1.3rem;
+    margin: 1.5% 0;
+    padding: 0 5%;
+    text-align: justify;
+    font-style: italic;
+}
+
+.txt-parrafo{
+    color: #e09a02;
+    font-style: italic;
+}
+
+.seccion1 h3{
+    width: 70%;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+
+.usuario span{
+    font-weight: bold;
+}
+
+.usuario .marca{
+    font-weight: bold;
+    color: #003399;
+    font-style: italic;
+}
+
+.img-usuario{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    margin: 30px 0;
+    object-fit: cover;
+    filter: drop-shadow(0px 2px 10px #f6981d );
+    transform: translateX(-20px);
+    transition: all 2s ease-in-out;
+}
+
+
+/* ================================ Aside ================================ */
+/* ================================ Aside ================================ */
+/* ================================ Aside ================================ */
+
+.aside{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid purple; */
+    position:absolute;
+    left: 80%;
+    overflow:auto;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    
+    
+}
+
+/* =========================== JSON ===========================  */
+/* =========================== JSON ===========================  */
+/* =========================== JSON ===========================  */
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    background-color: rgba(108, 195, 245, 0.918);
+
+    width: 95%;
+    height: 100%;
+    border-radius: 15px;
+    margin: 2px auto;
+    padding: 2% 2%;
+    overflow:visible;
+}
+
+.tarjeta h3{
+    text-align: center;
+    /* margin: 5px 0; */
+}
+
+.tarjeta ul{
+    /* border: 1px solid royalblue; */
+    margin: 2px 0;
+}
+
+.tarjeta > ul > li{
+    margin-left: 35px;
+}
+
+.tarjeta p{
+    margin: 5px 3px;
+}
+
+/* ------------------------- Estilos de la GALERIA ------------------------- */
+/* ------------------------- Estilos de la GALERIA ------------------------- */
+/* ------------------------- Estilos de la GALERIA ------------------------- */
+.main-galeria {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    position: relative;
+    align-items: center;
+
+
+    padding: 10% 0 5% 0;
+    /* background-color: rgba(0, 0, 0, 0.879); */
+}
+
+
+.h2-galeria{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    width: 50%;
+    text-align: center;
+    padding: 2% 0;
+    margin: 5% 0;
+    font-size: 5.5rem;
+    letter-spacing: 5px;
+    font-weight: 100;
+
+    color: #003399fb;
+    text-shadow: 2px 0px 2px #00000063;
+    /* background-color: #ab1616c3; */
+
+    position: sticky;
+    top: auto;
+    right: 40%;
+
+    opacity: 0;
+    transform: translatex(-50px);
+    transition: all 1s ease;
+    
+}
+
+.h2-galeria.muestra-h2{
+    opacity: 1;
+    transform: translatex(0px);
+    transition: all 1s ease-in;
+}
+
+.logo-proteina{
+    width: 30%;
+    height: 30%;
+    opacity: 0;
+    transform: translatex(50px);
+    transition: all 1s ease-in;
+    /* background-color: #ffffff67; */
+    filter: drop-shadow(-10px 5px 2px rgba(0, 0, 0, 0.405));
+    object-fit: contain;
+}
+
+img.muestra-logo{
+    opacity: 1;
+    transform: translatex(0px);
+    transition: all 1.5s ease-in;
+}
+
+.set-proteinas{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 150px;
+    padding: 3% 2%;
+    margin: 3% 0;
+    align-content: center;
+    position: relative;
+}
+
+/*========================= Estilos de la tarjeta =========================*/
+/*========================= Estilos de la tarjeta =========================*/
+.cont-proteina{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 25px;
+     
+    box-shadow: 0px 0px 15px rgba(151, 151, 151, 0.411);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    margin-top: 5%;
+    background-color:rgb(255, 255, 255);
+    
+    /* opacity: 0.5; */
+    
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in;
+    margin-top: 5%;
+    
+}
+
+/* Para que se muestre el contenedor de las proteinas */
+.cont-proteina.muestra{
+    opacity: 1;
+    transform: none;
+}
+
+
+.img-proteina{
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    margin: 5% 3%;
+    align-self: center;
+    text-align: center;
+    /* border: 1px solid blue; */
+    /* background-color: rgba(0, 255, 255, 0.776); */
+}
+
+.imagen-producto{
+    width: 80%;
+    height: 80%;
+    /* border:1px solid black; */
+    object-fit: contain;
+   
+}
+
+
+/* Caja info de tarjeta */
+.inf-producto {
+    width: 90%;
+    margin: 3% 0;
+    font-size: 2rem;
+    text-align: center;
+    /* border: 1px solid red; */
+    
+    /* background-color: #37ad91; */
+}
+
+/* Titulo h3 tarjeta */
+.inf-producto h3{
+    width: 100%;
+    margin: 3% 0;
+    padding: 0% 2%;
+    font-size: 2rem;
+    text-align: center;
+    gap: 15px;
+    /* background-color: #8ec0f3; */
+}
+
+.inf-producto h4{
+    width: 100%;
+    margin: 3% 0;
+    padding: 0% 1%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.inf-producto span{
+    font-weight: bold;
+}
+
+.p-info{
+    width: 100%;
+    margin: 3% 0;
+    border:none;
+    text-align: justify;
+    font-size: 1.3rem;
+    /* background-color: aqua; */
+
+}
+
+.precio-producto{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-self: flex-end;
+    justify-items: center;
+    /* align-items: end; */
+    gap: 10px;
+    margin: 2% 2%;
+    padding: 1% 0;
+    /* background-color: aquamarine; */
+}
+
+.precio-producto button{
+    width: 40%;
+    font-size: 1.5rem;
+    padding: 2% 0;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(177, 215, 249);
+}
+
+.precio-producto button:hover{
+    cursor: pointer;
+    color: #fcb125;
+    text-shadow: 1px 0 2px #c89629aa;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #fcb125;
+    font-weight: bold;
+    
+}
+
+.precio-producto span{
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+
+
+/* ================================ FORMULARIO ================================ */
+/* ================================ FORMULARIO ================================ */
+/* ================================ FORMULARIO ================================ */
+.main-presupuesto{
+    width: 100%;
+    padding: 5% 0;
+}
+
+.main-presupuesto>.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 90vh; */
+    margin: 10px auto;
+    justify-content: center;
+    border-radius: 10px;
+    
+    
+}
+
+.contenedor .titulo{
+    width: 100%;
+    /* background-color: #8ec0f3; */
+    padding: 1% 0;
+    margin: 1% 0;
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #003399;
+    text-shadow: 1px 0px 2px  #000000e5;
+    font-weight: 100;
+    font-style:italic;
+}
+
+form{
+    width: 100%;
+    /* min-height: 80dvh; */
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+    gap: 50px;
+    
+    
+}
+
+
+legend{
+    text-align: center;
+    color: blue;
+}
+
+/*  =====================================================
+    ============ ESTILOS PARA EL F-FORMULARIO ===========
+    ===================================================== */
+
+.f-formulario{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 10px #00000040;
+    
+}
+
+.f-formulario >.input-contenedor{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2%;
+    /* border: 1px solid salmon; */
+}
+
+.f-formulario>.input-contenedor>input{
+    
+    border: none;
+    border-bottom: 3px solid rgb(8, 8, 43) ;
+    padding: 0.5% 0;
+
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/*  =====================================================
+    ============ ESTILOS PARA EL F-PRESUPUESTO ===========
+    ===================================================== */
+
+.f-presupuesto{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 0 10px 10px #00000040;
+
+}
+
+/* *********** PRODUCTOS *********** */
+.caja-producto{
+    width: 100%;
+    margin: 2% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    /* border: 1px solid black; */
+    /* background-color: antiquewhite;  */
+}
+
+.caja-producto>select{
+    width: 40%;
+    text-align: center;
+    padding: 2% 0;
+    /* margin-left: 2%; */
+}
+
+/* ********************** MESES ********************** */
+/* ********************** MESES ********************** */
+/* ********************** MESES ********************** */
+
+.caja-meses{
+    width: 100%;
+    margin: 1% 1%;
+    text-align: center;
+    /* border: 1px solid black; */
+    /* background-color: antiquewhite; */
+}
+
+.caja-meses>#meses{
+    width: 10%;
+    margin-left: 4%;
+    padding: 0.2% 0;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: rgba(148, 137, 248, 0.411);
+    text-align: center;
+}
+
+/* ********************** EXTRAS ********************** */
+/* ********************** EXTRAS ********************** */
+/* ********************** EXTRAS ********************** */
+
+.caja-extras{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    padding: 2% ;
+    justify-content: center;
+    gap: 15px;
+    /* border: 1px solid black; */
+    /* background-color: antiquewhite; */
+}
+
+.extras{
+    font-size: 16px;
+    margin-left: 2%;
+}
+
+/* ********************** CAJA BOTON/RESULTADOS ********************** */
+/* ********************** CAJA BOTON/RESULTADOS ********************** */
+/* ********************** CAJA BOTON/RESULTADOS ********************** */
+
+.caja-boton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.caja-resultados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2% 5%;
+    text-align: left;
+    /* border: 1px solid black; */
+    /* background-color: antiquewhite; */
+}
+
+
+/*  =====================================================
+    ======= CAJA CONDICIONES Y ENVIO DE FORMULARIO ======
+    ===================================================== */
+
+.f-condiciones{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px #00000040;
+
+}
+
+.f-condiciones>.condiciones{
+    width: 100%;
+    padding: 1% 2%;
+
+    /* border: 1px solid black;
+    background-color: rgba(209, 135, 37, 0.477); */
+}
+
+.f-condiciones>.condiciones>label{
+    width: 100%;
+    margin-left: 1%;
+    
+}
+
+
+
+/*  =====================================================
+    ============ BOTONES DE ENVIO FORMULARIO ===========
+    ===================================================== */
+
+.button-contenedor{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: blanchedalmond;s */
+}
+
+.botonForm{
+    width: 30%;
+    height: 90%;
+    padding: 5px 5px;
+    margin: 1% 1%;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    background-color: #003399c3;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+
+.botonForm:hover{
+    background-color: rgb(255, 255, 255);
+    color: #003399c3;
+    box-shadow: 1px 2px 5px;
+    border: 1px solid #003399c3;
+}
+
+/* ======================== Estilos de los errores y validación ======================== */
+/* ======================== Estilos de los errores y validación ======================== */
+/* ======================== Estilos de los errores y validación ======================== */
+
+input.valido{
+    border-color: green;
+}
+
+input.invalido{
+    border-color: red;
+}
+
+.error{
+    color: red;
+    width: 100%;
+    padding: 0 1%;
+    font-size: 13px;
+}
+
+/* Error debajo del Select */
+#productoError{
+    text-align: center;
+}
+
+
+
+/*///////////////////// button:hover /////////////////////*/
+
+/* =============================== Contacto =============================== */
+/* =============================== Contacto =============================== */
+/* =============================== Contacto =============================== */
+.mainContacto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3% 0;
+    
+}
+
+.contact-info {
+    width: 80%;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(151, 151, 151, 0.411);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s;
+
+}
+
+.contact-info h2{
+    text-align: center;
+    margin: 0;
+    color: #c89629 ;
+}
+
+.contact-info p{
+    width: 100%;
+    text-align: center;
+}
+
+.map-container {
+    width: 80%;
+    height: 500px;
+    box-shadow: 0px 0px 15px rgba(151, 151, 151, 0.411);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 1;
+
+}
+
+.leaflet-routing-container {
+    width: 60%;
+    height: 60%;
+    padding: 5% 5% 15% 0;
+    /* margin-bottom: 10%; */
+    text-align: right;
+    color: #f9f9f9;
+    background: rgba(17, 18, 18, 0.843);
+    cursor:pointer;
+    
+ }
+
+
+/* =============================== Footer =============================== */
+/* =============================== Footer =============================== */
+/* =============================== Footer =============================== */
+
+.footer{
+    width: 100%;
+    height: 100dvh;
+    text-align: center;
+
+    
+    color: #fff;
+    /* padding: 0 10%; */
+    
+    background-color: #003399d8;
+    position: relative;
+    
+}
+
+.set-footer{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-logo{
+    width:30%;
+    height:100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 2px solid #c89629;
+}
+
+.set-footer h3{
+    width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    text-shadow: 1px 0px 0px  #000000;
+    opacity: 1;
+    transition: all 1s;
+    color: #fff;
+    margin: 2% 0;
+    text-shadow: 3px 0px 0px  #000000;
+
+    
+    /* background-color: rgb(122, 122, 12); */
+}
+
+
+.logo-footer{
+    width: 20%;
+    height: 20%;
+    filter: drop-shadow(2px 0 1px #000000);
+    /* border: 1px solid red; */
+    /* background-color: #000000; */
+    
+}
+
+/* Redes Sociales */
+.redes-sociales{
+    width: 50%;
+    height: 20dvh;
+    margin-top: 2%;
+    border-bottom: 2px solid #c89629;
+    /* border: 1px solid red; */
+    /* background-color: #8ec0f3; */
+    
+}
+.redes-sociales h2{
+    letter-spacing: 1.5px;
+    text-shadow: 3px 0 5px #000000;
+}
+
+.redes-sociales ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:2% 0;
+}
+
+.redes-sociales li{
+    width: 20%;
+    list-style-type: none;
+
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+.redes-sociales li a{
+    width: 100%;
+    height:100%;
+    /* padding: 0 5%; */
+    /* background-color: #ffffff; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in;
+    text-shadow: 1px 0px 0px  #000000;
+
+}
+
+a.enlaces-footer:hover{
+    color: #e4ba61;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in;
+}
+
+.iconos-redes{
+    width: 40px;
+    height: 40px;
+    transition: all 1s ease-out;
+    transform: translatey(0);
+    transition: all 0.5s;
+}
+
+.iconos-redes:hover{
+    transform: translatey(-5px);
+    transition: all 0.5s ease-out;
+    filter: drop-shadow( 5px 0 5px rgba(0, 0, 0, 0.534));
+}
+
+.contact-footer{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    text-shadow: 1px 0px 5px  #000000;
+    /* text-shadow: 3px 0px 5px  #000000; */
+    /* border: 1px solid red; */
+}
+
+.contact-footer a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact-footer a:hover{
+    color:#e09a02;
+    text-decoration: none;
+}
+
+.contact-footer p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+/* copyright */
+
+h3.copyright{
+    width: 100%;
+    padding-top: 2%;
+    border-top: 2px solid #c89629;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f9f9f9;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: normal;
+    text-shadow: 1px 0px 5px  #000000;
+
+}

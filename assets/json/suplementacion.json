@@ -1,0 +1,60 @@
+{
+    "suplementos": [
+      {
+        "nombre": "Proteína de suero",
+        "descripcion": "Suplemento alto en proteínas que ayuda en la recuperación y el crecimiento muscular.",
+        "beneficios": [
+          "Aumenta la síntesis de proteínas musculares",
+          "Mejora la recuperación post-entrenamiento",
+          "Fomenta el crecimiento muscular"
+        ],
+        "dosis_recomendada": "20-30 gramos después del entrenamiento",
+        "contraindicaciones": "Personas con intolerancia a la lactosa deben tener precaución."
+      },
+      {
+        "nombre": "Creatina",
+        "descripcion": "Compuesto que ayuda a mejorar el rendimiento en actividades de alta intensidad.",
+        "beneficios": [
+          "Aumenta la fuerza y la potencia",
+          "Mejora el rendimiento en ejercicios anaeróbicos",
+          "Favorece la ganancia de masa muscular"
+        ],
+        "dosis_recomendada": "3-5 gramos diarios",
+        "contraindicaciones": "No recomendado para personas con problemas renales."
+      },
+      {
+        "nombre": "BCAA (Aminoácidos de cadena ramificada)",
+        "descripcion": "Suplemento que ayuda a reducir la fatiga muscular y el dolor post-entrenamiento.",
+        "beneficios": [
+          "Reduce la fatiga durante el ejercicio",
+          "Disminuye el daño muscular",
+          "Mejora la síntesis de proteínas"
+        ],
+        "dosis_recomendada": "5-10 gramos antes o después del entrenamiento",
+        "contraindicaciones": "No se recomienda en exceso para personas con problemas hepáticos."
+      },
+      {
+        "nombre": "Omega 3",
+        "descripcion": "Ácido graso esencial que mejora la salud cardiovascular y reduce la inflamación.",
+        "beneficios": [
+          "Reduce la inflamación",
+          "Mejora la salud cardiovascular",
+          "Apoya la salud articular y muscular"
+        ],
+        "dosis_recomendada": "1-3 gramos diarios con las comidas",
+        "contraindicaciones": "Precaución en personas que toman anticoagulantes."
+      },
+      {
+        "nombre": "Cafeína",
+        "descripcion": "Estimulante que mejora la concentración y el rendimiento durante el entrenamiento.",
+        "beneficios": [
+          "Aumenta la energía",
+          "Mejora el enfoque y la concentración",
+          "Incrementa la resistencia física"
+        ],
+        "dosis_recomendada": "200-400 mg antes del entrenamiento",
+        "contraindicaciones": "No recomendado para personas sensibles a la cafeína o con problemas cardíacos."
+      }
+    ]
+  }
+  

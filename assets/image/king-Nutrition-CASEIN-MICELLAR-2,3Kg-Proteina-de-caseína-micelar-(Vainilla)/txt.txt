@@ -1,0 +1,7 @@
+
+Marca	Kingnutrition
+Sabor	Vainilla
+Peso del producto	2300 Gramos
+Fuente de proteínas	Caseína
+Recuento de unidades	2300.0 gramo
+Número de productos

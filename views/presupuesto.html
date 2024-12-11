@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Css -->
+     <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="body-presupuesto">
+    <header class="cabecera" id="cabecera">
+        <h1 class="titulo" id="h1-presupuesto">THE BEST GAINER </h1>
+        <p class="txt-cabecera">¡Tu mejor versión empieza ahora!</p>
+        <img class="img-cabecera" src="../assets/image/img-cabecera/strong-man-training-gym.jpg" alt="pesas" width="2000" height="866">
+    </header>
+    <nav class="barNav" id="barNav">
+        <div class="titulo-img">
+            <img class="logo" src="../assets/image/img-cabecera/logo-fuert2.png" alt="Logo" width="512" height="512">
+            <h3 class="h3-barra">THE BEST GAINER</h3>
+        </div>
+        <ul>
+            <li><a class="enlaces-barra" href="../index.html">Inicio</a></li>
+            <li><a class="enlaces-barra" href="./galeria.html" >Galería</a></li>
+            <li><a class="enlaces-barra" id="activo" href="#" >Presupuesto</a></li>
+            <li><a class="enlaces-barra" href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="main-presupuesto" id="main-presupuesto">
+
+        <section class="contenedor">
+            <h2 class="titulo">Rellenar formulario</h2> 
+    
+            <form class="formulario" id="formulario">
+
+                <fieldset class="f-formulario">
+                    <legend>Datos personales</legend>
+                    <div class="input-contenedor">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <span class="error" id="nombreError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+                        <span class="error" id="apellidoError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                        <span class="error" id="telefonoError"></span>
+                    </div>
+                    <div class="input-contenedor">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error" id="emailError"></span>
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset class="f-presupuesto">
+                    <legend>Presupuesto</legend>
+                    
+                    <!-- Producto -->
+                    <div class="caja-producto">
+                        <label for="producto">Productos</label>
+                        <select name="producto" id="producto" >
+                            <option value="0" selected>Seleccione producto</option>
+                            <option value="39">Super Mass Gainer Rich - 39€</option>
+                            <option value="45">Casein Micellar - 45€</option>
+                            <option value="60">Gold Standard Whey - 60€</option>
+                            <option value="75">Proteína Whey - Pure Fusion - 75€</option>
+                            <option value="39">Ultimate Whey Proteína - 39</option>
+                        </select>
+                        <span class="error" id="productoError"></span>
+                    </div>
+
+                    <!-- Plazo en meses -->
+                    <div class="caja-meses">
+                        <label for="meses">Plazo en meses</label>
+                        <input type="number" id="meses" name="meses" min="1" value="1">
+                    </div>
+
+                    <!-- Extras añadidos -->
+                    
+                        <div class="caja-extras" id="caja-extras" >
+                            <h3 class="extras-titulo">Añadir un extra:</h3>
+                            <div class="extras">
+                                <input type="checkbox" class="input-check" id="mezclador" name="mezclador" value="10">
+                                <label for="mezclador">Vaso Mezclador - 10€</label>
+                            </div>
+                            
+                            <div class="extras">
+                                <input type="checkbox" class="input-check" id="creatina" name="creatina" value="30">
+                                <label for="creatina">Creatina Monohidrato - 30€</label>
+                            </div>
+                            
+                            <div class="extras">
+                                <input type="checkbox" class="input-check" id="glutamina" name="glutamina" value="15">
+                                <label for="glutamina">L-glutamina - 15€</label>
+                            </div>
+                        
+                        </div>
+
+                      <!-- Resultado -->
+                      <!-- <div class="caja-boton">
+                         <button type="button" id="btn-calcular">Calcular Presupuesto</button>
+                      </div> -->
+                  
+                      <div class="caja-resultados">
+                            <p>
+                                <strong>Presupuesto final:</strong>
+                                <span id="presupuesto-final">0€</span>
+                            </p>
+                      </div>
+                </fieldset>
+
+                <fieldset class="f-condiciones">
+                    <legend>Condiciones y envío del presupuesto</legend>
+                    <div class="condiciones">
+                        <input type="checkbox" class="input-condiciones" id="condiciones" name="condiciones" required>
+                        <label for="condiciones"> Acepta las condiciones legales para el envio de este formulario</label>
+                    </div>
+
+
+                    <div class="button-contenedor">
+                        <button class="botonForm" type="submit">Registrarse</button>
+                        <button class="botonForm" type="reset" onclick="resetFormulario()">Borrar</button>
+                    </div>
+
+                </fieldset>
+
+                
+            </form>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <section class="set-footer">
+            <div class="titulo-logo">
+                <img class="logo-footer" src="../assets/image/img-cabecera/logo-fuert2.png" alt="Logo" width="512" height="512">
+
+                <h3>THE BEST GAINER</h3>
+            </div>
+            
+
+            <div class="redes-sociales">
+                <h2 class="h2-redes">Redes Sociales</h2>
+                <ul>
+                    <li>
+                        <a class="enlaces-footer" href="#"><img class="iconos-redes" src="../assets/image/img-cabecera/redes-sociales/facebook.png" alt="facebook" width="512" height="512">Facebook</a>
+                    </li>
+                    <li>
+                        <a class="enlaces-footer" href="#"><img class="iconos-redes" src="../assets/image/img-cabecera/redes-sociales/linkedin.png" alt="linkedin" width="512" height="512">Linkedin</a>
+                    </li>
+                    <li>
+                        <a class="enlaces-footer" href="#"><img class="iconos-redes" src="../assets/image/img-cabecera/redes-sociales/instagram.png" alt="instagram" width="512" height="512">Instagram</a>
+                    </li>
+                    <li>
+                        <a class="enlaces-footer" href="#"><img class="iconos-redes" src="../assets/image/img-cabecera/redes-sociales/whatsapp.png" alt="whatsapp" width="512" height="512">WhatsApp</a>
+                    </li>
+                    <li>
+                        <a class="enlaces-footer" href="#"><img class="iconos-redes" src="../assets/image/img-cabecera/redes-sociales/x.png" alt="X" width="128" height="128">X</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <section class="contact-footer">
+                <h2>Ubicación y Dirección</h2>
+                <p><a href="../views/contacto.html">📍 Dirección: Calle Gran Vía, 45, Madrid, España</a></p>
+                <p>📞 Teléfono: +34 123 456 789</p>
+                <p>📧 Email: contacto@empresa.com</p>
+                <h3 class="copyright">Todos los derechos de autor estan reservados: Copyright &COPY;</h3>
+            </section>
+        </section>
+    
+    </footer>
+
+    <!-- JS -->
+    <!-- <script src="../javaScripts/galeria.js"></script> -->
+    <script src="../javaScripts/formulario.js"></script>
+    <script src="../javaScripts/main.js"></script>
+</body>
+</html>
